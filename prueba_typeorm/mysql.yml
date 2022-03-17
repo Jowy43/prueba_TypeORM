@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mysql:
+    container_name: sequelize_mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "abc123."
+      MYSQL_USER: "joel"
+      MYSQL_PASS: "abc123."
+    volumes:
+      - D:\Joel\nodeProjects\prueba_sequelize\bd:/var/lib/mysql
+    ports:
+      - "3306:3306"
